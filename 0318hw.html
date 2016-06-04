@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <FONT FACE="微軟正黑體">
+<head>
+    <meta charset="UTF-8">
+    <title>倒數計時器</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="main2.js"></script>
+<style>
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #6a3906;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #f8b551;
+    color: white;
+}
+</style>
+</head>
+<body text="#6a3906" link="#FFFFFF" vlink="#FFFFFF" alink="#808000">
+
+<ul>
+  <li><a class="active" href="#home"><h4 id="topicH1">難忘的一天</h1></a></li>
+  <li><a href="#set">設定</a></li>
+</ul>
+
+<div style="margin-left:25%;padding:1px 8px;height:500px;">
+    
+<a name="home">
+    <div>
+    <br>
+    <br>
+    <br>
+  <h1 id="topicDate">倒數計時器</h1>
+    <hr>
+    <h1 id="countDownLabel">剩餘時間顯示在這裡</h1>
+        </div>
+        </a>
+    
+
+<a name="set">
+<div id="settingBlock">
+        <br>
+        <br>
+        <h1>設定</h1>
+        <!-- 輸入文字、日期、下拉選單、按鈕 -->
+        <input type="text" 
+               placeholder="請輸入活動主題"
+               size="50"
+               id="newTopic"
+               >
+        <input type="date"
+               id="newDate">
+        <input type="button" value="確定"
+               id="confirmButton">
+        <br>
+        背景設定
+        <select id="bgSelect">
+            <option value=""></option>
+            <option value="MemorialDay">家人聚會</option>
+            <option value="BusinessEvent">學校活動</option>
+            <option value="BirthdayParty">生日慶祝</option>
+        </select>
+    
+    </div>
+    <br/><br/><br/>
+    </a> 
+    <br/><br/><br/>
+
+</div>
+<br/><br/><br/>
+</div>
+</FONT>
+</body>
+</html>

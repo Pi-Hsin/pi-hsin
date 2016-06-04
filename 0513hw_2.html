@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <FONT FACE="微軟正黑體">
+    <meta charset="UTF-8">
+    <title>Youtube影片播放</title>
+    <link rel="stylesheet" href="demo.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/tomorrow.min.css">
+
+</head>
+<body>
+
+<header>
+    <h1>Youtube影片播放</h1>
+    <!-- <a href="http://tutorialzine.com/2015/08/how-to-control-youtubes-video-player-with-javascript/">Download</a>-->
+</header>
+
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+
+<div id="video-placeholder"></div>
+
+
+
+<div id="controls">
+
+    <ul>
+
+        <li>
+            <input type="range" id="progress-bar" value="0">
+            <table border="0">
+　<tr>
+　<td><span id="current-time">0:00</span> / <span id="duration">0:00</span></td>
+　<td><i id="play" class="material-icons">play_arrow</i></td>
+     　<td><i id="pause" class="material-icons">pause</i></td>
+     　<td><i id="mute-toggle" class="material-icons">volume_up</i></td>
+     　<td><input id="volume-input" type="number" max="100" min="0"></td>
+     <td><select id="speed">
+                <option>0.25</option>
+                <option>0.5</option>
+                <option selected="selected">1</option>
+                <option>1.5</option>
+            <option>2</option>
+            </select></td>
+     <td><i id="next" class="material-icons">fast_forward</i></td>
+     <td><i id="prev" class="material-icons">fast_rewind</i></td>
+　</tr>
+</table>
+        </li>
+
+    </ul>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
