@@ -1,0 +1,11 @@
+body{
+    text-align: center;
+    background-size: cover;
+    filter: alpha( opacity=10 );
+}
+div#settingBlock{
+    margin-top: 400px;
+}
+select{
+    width: 30%;
+}
