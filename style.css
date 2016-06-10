@@ -1,0 +1,42 @@
+body{
+    background-image: url(images/sky.png);
+    background-size: cover;
+}
+
+
+#sun{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    position: absolute;
+    top:100px;
+    left: 100px;
+    border-radius: 50%; 
+    box-shadow: 0px 0px 100px yellow;
+    transition: height 2s,width 2s;/*滑鼠靠近太陽長寬變化速度*/
+}
+#sun:hover{
+    height: 120px;
+    width:120px;
+}
+#cow{
+    position: absolute;
+    top:200px;
+    left: 250px;
+    height: 100px;
+    width: 200px;
+    background-image: url(images/star1.png),url(images/star.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(30deg);
+}
+@font-face
+{
+    font-family:myFirsrFont;
+    src:url("https://dl.dropboxusercontent.com/u/11373114/Font/Sansation_Light.ttf");
+    
+}
+p{
+    font-size: 32px;
+    font-family: cursive;
+}

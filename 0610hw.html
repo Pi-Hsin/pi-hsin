@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+        .zhendimage{ position:relative; }
+    </style>
+    <script src="main.js"></script>
+    <script type="application/javascript">
+        var rector =3;
+        var stopit = 0;
+        var a=1;
+        var zhend;
+        function blink()
+        {
+            //定义图片的显示和隐藏属性
+            tp.style.visibility = (tp.style.visibility=="hidden")?"visible":"hidden";    
+            //每0.5秒刷新一次
+            setTimeout("blink()",500);
+        }
+        function init(which)
+        {
+            stopit =0;
+            zhend = which;
+            zhend.style.left =0;
+            zhend.style.top =0;
+        }
+        function rattleimage()
+        {
+            if(stopit==1)
+            {
+                return;
+            }    
+            if(a==1)
+            {
+                zhend.style.top = parseInt(zhend.style.top)+rector+"px";
+            }
+            else if(a==2)
+            {
+                zhend.style.left = parseInt(zhend.style.left)+rector+"px";
+            }
+            else if(a==3)
+            {
+                zhend.style.top = parseInt(zhend.style.top)-rector+"px";
+            }
+            else 
+            {
+                zhend.style.left = parseInt(zhend.style.left)-rector+"px";
+            }
+            if(a<4)a++;    else a =1;
+            setTimeout("rattleimage()",50);
+        }
+
+        function stoprattle(which)
+        {
+            stopit = 1;
+            which.style.left =0;    
+            which.style.top =0;        
+        }
+    </script>
+    
+</head>
+<body onload="blink();">
+    
+    <p><font color="#fff">Fly in the sky</font></p>
+    <br/>
+    
+    <div id="tp">
+        <img class="zhendimage" onmousemove="init(this);rattleimage();"
+        onmouseout="stoprattle(this);"  src="images/star.png" style="left:200px; top:150px; width:50px; height:50px;"/>
+    </div>
+    <canvas id="myCanvas6"
+           width="1300" height="250"
+           style="border:0px solid gray">     
+    </canvas>
+    <marquee behavior=side direction=down height="300">
+    <img src="images/sky.png" width=100% />
+    </marquee>
+    <div id="sun"></div>    
+    <div id="cow"></div>
+
+</body>
+</html>
